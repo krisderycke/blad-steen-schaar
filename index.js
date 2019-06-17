@@ -10,6 +10,12 @@ Paper.addEventListener("click", paper);
 Scissor.addEventListener("click", scissor);
 Random.addEventListener("click", randomUser);
 Fight.addEventListener("click", fight);
+Reset.addEventListener("click", reset);
+
+function reset() {
+  document.getElementById("User").src = "/Assets/images/question.png";
+  document.getElementById("Pc").src = "/Assets/images/question.png";
+}
 
 function rock() {
   document.getElementById("User").src = "/Assets/images/rock.png";
