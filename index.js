@@ -1,4 +1,23 @@
-let rock = document.getElementById("Rock");
-let paper = document.getElementById("Paper");
-let scissor = document.getElementById("Scissors");
-let random = document.getElementById("Random");
+const Rock = document.getElementById("Rock");
+const Paper = document.getElementById("Paper");
+const Scissor = document.getElementById("Scissors");
+const Random = document.getElementById("Random");
+const Reset = document.getElementById("Reset");
+
+Rock.addEventListener("click", rock);
+Paper.addEventListener("click", paper);
+Scissor.addEventListener("click", scissor);
+
+function rock() {
+  document.getElementById("User").src = "/Assets/images/rock.png";
+  console.log("rock");
+}
+function paper() {
+  document.getElementById("User").src = "/Assets/images/paper.jpg";
+  console.log("paper");
+}
+
+function scissor() {
+  document.getElementById("User").src = "/Assets/images/scissors.png";
+  console.log("scicc");
+}

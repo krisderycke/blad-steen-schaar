@@ -25,8 +25,14 @@ body {
   left: 50px;
 }
 
+#Fight {
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+  margin-top: 25%;
+}
+
 img {
-  display: none;
   height: 200px;
   width: 200px;
 }
