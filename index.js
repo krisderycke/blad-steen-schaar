@@ -4,6 +4,8 @@ const Scissor = document.getElementById("Scissors");
 const Random = document.getElementById("Random");
 const Fight = document.getElementById("Fight");
 const Reset = document.getElementById("Reset");
+const User = document.getElementById("User");
+const Pc = document.getElementById("Pc");
 
 Rock.addEventListener("click", rock);
 Paper.addEventListener("click", paper);
@@ -57,14 +59,60 @@ function fight() {
   document.getElementById("Pc").src = randPc;
   console.log("randomPc");
 
-  // let _1 = (document.getElementById("User").src = "/Assets/images/rock.png");
-  // let _2 = (document.getElementById("User").src = "/Assets/images/paper.jpg");
-  // let _3 = (document.getElementById("User").src =
-  //   "/Assets/images/scissors.png");
+  let span = document.getElementById("span");
+  if (
+    User.src == "/Assets/images/rock.png" &&
+    Pc.src == "/Assets/images/rock.png"
+  ) {
+    span.innerHTML = "It's a tie, reset and start again";
+  }
+  if (
+    User.src == "/Assets/images/paper.jpg" &&
+    Pc.src == "/Assets/images/rock.png"
+  ) {
+    span.innerHTML = "You win!";
+  }
 
-  // let _4 = (document.getElementById("Pc").src = "/Assets/images/rock.png");
-  // let _5 = (document.getElementById("Pc").src = "/Assets/images/paper.jpg");
-  // let _6 = (document.getElementById("Pc").src = "/Assets/images/scissors.png");
-
-  console.log("fight");
+  if (
+    User.src == "/Assets/images/scissors.png" &&
+    Pc.src == "/Assets/images/rock.png"
+  ) {
+    span.innerHTML = "Auwtch, You loose";
+  }
+  if (
+    User.src == "/Assets/images/rock.png" &&
+    Pc.src == "/Assets/images/paper.jpg"
+  ) {
+    span.innerHTML = " Aha, you shredded the opponent!";
+  }
+}
+if (
+  User.src == "/Assets/images/paper.jpg" &&
+  Pc.src == "/Assets/images/paper.jpg"
+) {
+  span.innerHTML = "Tie break. please reset";
+}
+if (
+  User.src == "/Assets/images/scissors.png" &&
+  Pc.src == "/Assets/images/paper.jpg"
+) {
+  span.innerHTML = " The enemy has defeated you";
+}
+if (
+  User.src == "/Assets/images/rock.png" &&
+  Pc.src == "/Assets/images/scissors.png"
+) {
+  span.innerHTML = "You crushed the foo";
+}
+if (
+  User.src == "/Assets/images/paper.jpg" &&
+  Pc.src == "/Assets/images/scissors.png"
+) {
+  span.innerHTML = "The enemy has cut you in pieces, fight again!";
+}
+if (
+  User.src == "/Assets/images/scissors.png" &&
+  Pc.src == "/Assets/images/scissors.png"
+) {
+  span.innerHTML = " reset the fight, one cannot win from the same element";
 }
