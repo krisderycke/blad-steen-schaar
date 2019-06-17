@@ -5,3 +5,22 @@ body {
 .header {
   text-align: center;
 }
+
+.container {
+  margin-left: 2em;
+  position: relative;
+}
+
+.versus {
+  position: absolute;
+  display: flex;
+  margin-left: 50%;
+  margin-top: 20vh;
+  transform: translateX(-50%);
+}
+
+#reset {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+}
