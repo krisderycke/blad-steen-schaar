@@ -56,22 +56,27 @@ function fight() {
     randomImagesPc[Math.floor(Math.random() * randomImagesPc.length)];
   document.getElementById("Pc").src = randPc;
   console.log("randomPc");
-}
 
-// let RockFight = (document.getElementById("User").src =
-//   "/Assets/images/rock.png");
-// let PaperFight = (document.getElementById("User").src =
-//   "/Assets/images/paper.jpg");
-// let ScissorFight = (document.getElementById("User").src =
-//   "/Assets/images/scissors.png");
+ 
 
-// let RockFightPc = (document.getElementById("Pc").src =
-//   "/Assets/images/rock.png");
-// let PaperFightPc = (document.getElementById("Pc").src =
-//   "/Assets/images/paper.jpg");
-// let ScissorFightPc = (document.getElementById("Pc").src =
-//   "/Assets/images/scissors.png");
+
+
+let _1 = (document.getElementById("User").src =
+  "/Assets/images/rock.png");
+let _2 = (document.getElementById("User").src =
+  "/Assets/images/paper.jpg");
+let _3 = (document.getElementById("User").src =
+  "/Assets/images/scissors.png");
+
+let _4 = (document.getElementById("Pc").src =
+  "/Assets/images/rock.png");
+let _5 = (document.getElementById("Pc").src =
+  "/Assets/images/paper.jpg");
+let _6 = (document.getElementById("Pc").src =
+  "/Assets/images/scissors.png");
 
 console.log("fight");
-// if (RockFight && PaperFightPc) {
-//   console.log("you loose");
+ if (_1 && _5) {
+  console.log("you loose");
+
+ }
