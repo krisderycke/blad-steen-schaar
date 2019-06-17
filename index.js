@@ -57,26 +57,14 @@ function fight() {
   document.getElementById("Pc").src = randPc;
   console.log("randomPc");
 
- 
+  // let _1 = (document.getElementById("User").src = "/Assets/images/rock.png");
+  // let _2 = (document.getElementById("User").src = "/Assets/images/paper.jpg");
+  // let _3 = (document.getElementById("User").src =
+  //   "/Assets/images/scissors.png");
 
+  // let _4 = (document.getElementById("Pc").src = "/Assets/images/rock.png");
+  // let _5 = (document.getElementById("Pc").src = "/Assets/images/paper.jpg");
+  // let _6 = (document.getElementById("Pc").src = "/Assets/images/scissors.png");
 
-
-let _1 = (document.getElementById("User").src =
-  "/Assets/images/rock.png");
-let _2 = (document.getElementById("User").src =
-  "/Assets/images/paper.jpg");
-let _3 = (document.getElementById("User").src =
-  "/Assets/images/scissors.png");
-
-let _4 = (document.getElementById("Pc").src =
-  "/Assets/images/rock.png");
-let _5 = (document.getElementById("Pc").src =
-  "/Assets/images/paper.jpg");
-let _6 = (document.getElementById("Pc").src =
-  "/Assets/images/scissors.png");
-
-console.log("fight");
- if (_1 && _5) {
-  console.log("you loose");
-
- }
+  console.log("fight");
+}
