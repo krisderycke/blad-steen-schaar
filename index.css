@@ -24,3 +24,9 @@ body {
   bottom: 50px;
   left: 50px;
 }
+
+img {
+  display: none;
+  height: 200px;
+  width: 200px;
+}
