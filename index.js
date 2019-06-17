@@ -8,7 +8,7 @@ const Reset = document.getElementById("Reset");
 Rock.addEventListener("click", rock);
 Paper.addEventListener("click", paper);
 Scissor.addEventListener("click", scissor);
-Random.addEventListener("click", random);
+Random.addEventListener("click", randomUser);
 Fight.addEventListener("click", fight);
 
 function rock() {
@@ -25,7 +25,7 @@ function scissor() {
   console.log("scicc");
 }
 
-function random() {
+function randomUser() {
   var randomImages = [
     "/Assets/images/rock.png",
     "/Assets/images/paper.jpg",
@@ -37,13 +37,35 @@ function random() {
   console.log("random");
 }
 
-function fight() {
-  let RockFight = (document.getElementById("Rock").src =
-    "/Assets/images/rock.png");
-  let PaperFight = (document.getElementById("Paper").src =
-    "/Assets/images/paper.jpg");
-  let ScissorFight = (document.getElementById("Scissors").src =
-    "/Assets/images/scissors.png");
+//making "fight button" pick a random image
 
-  console.log("fight");
+function fight() {
+  var randomImagesPc = [
+    "/Assets/images/rock.png",
+    "/Assets/images/paper.jpg",
+    "/Assets/images/scissors.png"
+  ];
+
+  var randPc =
+    randomImagesPc[Math.floor(Math.random() * randomImagesPc.length)];
+  document.getElementById("Pc").src = randPc;
+  console.log("randomPc");
 }
+
+// let RockFight = (document.getElementById("User").src =
+//   "/Assets/images/rock.png");
+// let PaperFight = (document.getElementById("User").src =
+//   "/Assets/images/paper.jpg");
+// let ScissorFight = (document.getElementById("User").src =
+//   "/Assets/images/scissors.png");
+
+// let RockFightPc = (document.getElementById("Pc").src =
+//   "/Assets/images/rock.png");
+// let PaperFightPc = (document.getElementById("Pc").src =
+//   "/Assets/images/paper.jpg");
+// let ScissorFightPc = (document.getElementById("Pc").src =
+//   "/Assets/images/scissors.png");
+
+console.log("fight");
+// if (RockFight && PaperFightPc) {
+//   console.log("you loose");
