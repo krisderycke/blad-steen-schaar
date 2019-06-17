@@ -2,12 +2,14 @@ const Rock = document.getElementById("Rock");
 const Paper = document.getElementById("Paper");
 const Scissor = document.getElementById("Scissors");
 const Random = document.getElementById("Random");
+const Fight = document.getElementById("Fight");
 const Reset = document.getElementById("Reset");
 
 Rock.addEventListener("click", rock);
 Paper.addEventListener("click", paper);
 Scissor.addEventListener("click", scissor);
 Random.addEventListener("click", random);
+Fight.addEventListener("click", fight);
 
 function rock() {
   document.getElementById("User").src = "/Assets/images/rock.png";
@@ -32,4 +34,16 @@ function random() {
 
   var rand = randomImages[Math.floor(Math.random() * randomImages.length)];
   document.getElementById("User").src = rand;
+  console.log("random");
+}
+
+function fight() {
+  let RockFight = (document.getElementById("Rock").src =
+    "/Assets/images/rock.png");
+  let PaperFight = (document.getElementById("Paper").src =
+    "/Assets/images/paper.jpg");
+  let ScissorFight = (document.getElementById("Scissors").src =
+    "/Assets/images/scissors.png");
+
+  console.log("fight");
 }
