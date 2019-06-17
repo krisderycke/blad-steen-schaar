@@ -17,6 +17,7 @@ Reset.addEventListener("click", reset);
 function reset() {
   document.getElementById("User").src = "/Assets/images/question.png";
   document.getElementById("Pc").src = "/Assets/images/question.png";
+  document.getElementById("span").innerHTML = "";
 }
 
 function rock() {
@@ -59,60 +60,66 @@ function fight() {
   document.getElementById("Pc").src = randPc;
   console.log("randomPc");
 
-  let span = document.getElementById("span");
+  var span = document.getElementById("span");
   if (
     User.src == "/Assets/images/rock.png" &&
     Pc.src == "/Assets/images/rock.png"
   ) {
     span.innerHTML = "It's a tie, reset and start again";
-  }
-  if (
+    console.log("result");
+  } else if (
     User.src == "/Assets/images/paper.jpg" &&
     Pc.src == "/Assets/images/rock.png"
   ) {
     span.innerHTML = "You win!";
-  }
-
-  if (
+    console.log("result");
+  } else if (
     User.src == "/Assets/images/scissors.png" &&
     Pc.src == "/Assets/images/rock.png"
   ) {
     span.innerHTML = "Auwtch, You loose";
-  }
-  if (
+    console.log("result");
+  } else if (
     User.src == "/Assets/images/rock.png" &&
     Pc.src == "/Assets/images/paper.jpg"
   ) {
     span.innerHTML = " Aha, you shredded the opponent!";
-  }
-}
-if (
-  User.src == "/Assets/images/paper.jpg" &&
-  Pc.src == "/Assets/images/paper.jpg"
-) {
-  span.innerHTML = "Tie break. please reset";
-}
-if (
-  User.src == "/Assets/images/scissors.png" &&
-  Pc.src == "/Assets/images/paper.jpg"
-) {
-  span.innerHTML = " The enemy has defeated you";
-}
-if (
-  User.src == "/Assets/images/rock.png" &&
-  Pc.src == "/Assets/images/scissors.png"
-) {
-  span.innerHTML = "You crushed the foo";
-}
-if (
-  User.src == "/Assets/images/paper.jpg" &&
-  Pc.src == "/Assets/images/scissors.png"
-) {
-  span.innerHTML = "The enemy has cut you in pieces, fight again!";
-}
-if (
-  User.src == "/Assets/images/scissors.png" &&
-  Pc.src == "/Assets/images/scissors.png"
-) {
+    console.log("result");
+  } else if (
+    User.src == "/Assets/images/paper.jpg" &&
+    Pc.src == "/Assets/images/paper.jpg"
+  ) {
+    span.innerHTML = "Tie break. please reset";
+    console.log("result");
+  } else if (
+    User.src == "/Assets/images/scissors.png" &&
+    Pc.src == "/Assets/images/paper.jpg"
+  ) {
+    span.innerHTML = " The enemy has defeated you";
+    console.log("result");
+  } else if (
+    User.src == "/Assets/images/rock.png" &&
+    Pc.src == "/Assets/images/scissors.png"
+  ) {
+    span.innerHTML = "You crushed the foo";
+    console.log("result");
+  } else if (
+    User.src == "/Assets/images/paper.jpg" &&
+    Pc.src == "/Assets/images/scissors.png"
+  ) {
+    span.innerHTML = "The enemy has cut you in pieces, fight again!";
+    console.log("result");
+  } else
+    User.src == "./Assets/images/scissors.png" &&
+      Pc.src == "./Assets/images/scissors.png";
+
   span.innerHTML = " reset the fight, one cannot win from the same element";
+  console.log("result");
+  console.log(User.src);
+  console.log(Pc.src);
+  console.log("false", User.src === "/Assets/images/scissors.png");
+  console.log(
+    "somtimes true",
+    Pc.src === "http://127.0.0.1:5500/Assets/images/scissors.png"
+  );
 }

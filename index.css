@@ -1,5 +1,9 @@
 body {
   font-family: "Montserrat Subrayada", sans-serif;
+  height: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 .header {
@@ -12,7 +16,6 @@ body {
 }
 
 .versus {
-  position: absolute;
   display: flex;
   margin-left: 50%;
   margin-top: 20vh;
@@ -20,16 +23,14 @@ body {
 }
 
 #reset {
-  position: absolute;
-  bottom: 50px;
-  left: 50px;
+  padding-left: 200px;
 }
 
 #Fight {
   height: 50px;
   width: 50px;
   margin: 10px;
-  margin-top: 25%;
+  margin-top: 25px;
 }
 
 img {
@@ -37,5 +38,5 @@ img {
   width: 200px;
 }
 #result {
-  text-align: center;
+  margin-left: 200px;
 }
