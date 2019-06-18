@@ -77,8 +77,7 @@ function fight() {
   } else if (User.className === "paper" && Pc.className === "scissors") {
     span.innerHTML = " The enemy has cut you in pieces, fight again!";
     span.style.color = "red";
-  } else if (User.className === "scissors" && Pc.className === "scissors") {
-    span.innerHTML = " Reset the fight, one cannot win from the same element";
-    span.style.color = "blue";
-  }
+  } else User.className === "scissors" && Pc.className === "scissors";
+  span.innerHTML = " Reset the fight, one cannot win from the same element";
+  span.style.color = "blue";
 }
