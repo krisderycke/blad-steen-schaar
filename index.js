@@ -10,7 +10,7 @@ const Pc = document.getElementById("Pc");
 Rock.addEventListener("click", rock);
 Paper.addEventListener("click", paper);
 Scissor.addEventListener("click", scissor);
-// Random.addEventListener("click", randomUser);
+Random.addEventListener("click", randomUser);
 Fight.addEventListener("click", fight);
 Reset.addEventListener("click", reset);
 
@@ -34,20 +34,18 @@ function scissor() {
   console.log("scicc");
 }
 
-// function randomUser() {
-//   var randomImages = [
-//     "/Assets/images/rock.png",
-//     "/Assets/images/paper.jpg",
-//     "/Assets/images/scissors.png"
-//   ];
+function randomUser() {
+  var randomImages = ["rock", "paper", "scissors"];
 
-//   var rand = randomImages[Math.floor(Math.random() * randomImages.length)];
-//   document.getElementById("User").src = rand;
-//   console.log("random");
+  var rand = randomImages[Math.floor(Math.random() * randomImages.length)];
+  User.className = rand;
+  console.log("random");
+}
 
-//making "fight button" pick a random image
+//making "fight button" pick a random image for the Pc
 
 function fight() {
+  var span = document.getElementById("span");
   var randomClassesPc = ["rock", "paper", "scissors"];
 
   var randPc =
@@ -55,70 +53,32 @@ function fight() {
   Pc.className = randPc;
   console.log("randomPc");
 
-
-
-
-
-
-  
-
-//   var span = document.getElementById("span");
-//   if (User.className === "rock" && Pc.className === "rock") {
-//     span.innerHTML = "It's a tie, reset and start again";
-//     console.log("result");
-//   } else if (
-//     User.src == "/Assets/images/paper.jpg" &&
-//     Pc.src == "/Assets/images/rock.png"
-//   ) {
-//     span.innerHTML = "You win!";
-//     console.log("result");
-//   } else if (
-//     User.src == "/Assets/images/scissors.png" &&
-//     Pc.src == "/Assets/images/rock.png"
-//   ) {
-//     span.innerHTML = "Auwtch, You loose";
-//     console.log("result");
-//   } else if (
-//     User.src == "/Assets/images/rock.png" &&
-//     Pc.src == "/Assets/images/paper.jpg"
-//   ) {
-//     span.innerHTML = " Aha, you shredded the opponent!";
-//     console.log("result");
-//   } else if (
-//     User.src == "/Assets/images/paper.jpg" &&
-//     Pc.src == "/Assets/images/paper.jpg"
-//   ) {
-//     span.innerHTML = "Tie break. please reset";
-//     console.log("result");
-//   } else if (
-//     User.src == "/Assets/images/scissors.png" &&
-//     Pc.src == "/Assets/images/paper.jpg"
-//   ) {
-//     span.innerHTML = " The enemy has defeated you";
-//     console.log("result");
-//   } else if (
-//     User.src == "/Assets/images/rock.png" &&
-//     Pc.src == "/Assets/images/scissors.png"
-//   ) {
-//     span.innerHTML = "You crushed the foo";
-//     console.log("result");
-//   } else if (
-//     User.src == "/Assets/images/paper.jpg" &&
-//     Pc.src == "/Assets/images/scissors.png"
-//   ) {
-//     span.innerHTML = "The enemy has cut you in pieces, fight again!";
-//     console.log("result");
-//   } else
-//     User.src == "./Assets/images/scissors.png" &&
-//       Pc.src == "./Assets/images/scissors.png";
-
-//   span.innerHTML = " reset the fight, one cannot win from the same element";
-//   console.log("result");
-//   console.log(User.src);
-//   console.log(Pc.src);
-//   console.log("false", User.src === "/Assets/images/scissors.png");
-//   console.log(
-//     "somtimes true",
-//     Pc.src === "http://127.0.0.1:5500/Assets/images/scissors.png"
-//   );
-// }
+  if (User.className === "rock" && Pc.className === "rock") {
+    span.innerHTML = " It's a tie, reset and start again";
+    span.style.color = "blue";
+  } else if (User.className === "paper" && Pc.className === "rock") {
+    span.innerHTML = " You win!";
+    span.style.color = "green";
+  } else if (User.className === "scissors" && Pc.className === "rock") {
+    span.innerHTML = " Auwtch, You loose";
+    span.style.color = "red";
+  } else if (User.className === "rock" && Pc.className === "paper") {
+    span.innerHTML = " The enemy has defeated you";
+    span.style.color = "red";
+  } else if (User.className === "paper" && Pc.className === "paper") {
+    span.innerHTML = " Tie break. please reset";
+    span.style.color = "blue";
+  } else if (User.className === "scissors" && Pc.className === "paper") {
+    span.innerHTML = " Aha, you shredded the opponent! ";
+    span.style.color = "green";
+  } else if (User.className === "rock" && Pc.className === "scissors") {
+    span.innerHTML = " You crushed the foo";
+    span.style.color = "green";
+  } else if (User.className === "paper" && Pc.className === "scissors") {
+    span.innerHTML = " The enemy has cut you in pieces, fight again!";
+    span.style.color = "red";
+  } else if (User.className === "scissors" && Pc.className === "scissors") {
+    span.innerHTML = " Reset the fight, one cannot win from the same element";
+    span.style.color = "blue";
+  }
+}
