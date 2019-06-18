@@ -22,6 +22,16 @@ body {
   transform: translateX(-50%);
 }
 
+#User {
+  height: 200px;
+  width: 200px;
+}
+
+#Pc {
+  height: 200px;
+  width: 200px;
+}
+
 #reset {
   padding-left: 200px;
 }
@@ -39,4 +49,31 @@ img {
 }
 #result {
   margin-left: 200px;
+}
+.rock {
+  background-image: url(/Assets/images/rock.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.paper {
+  background-image: url(/Assets/images/paper.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.scissors {
+  background-image: url(/Assets/images/scissors.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.question {
+  background-image: url(/Assets/images/question.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }

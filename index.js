@@ -15,13 +15,13 @@ Fight.addEventListener("click", fight);
 Reset.addEventListener("click", reset);
 
 function reset() {
-  document.getElementById("User").src = "/Assets/images/question.png";
-  document.getElementById("Pc").src = "/Assets/images/question.png";
+  document.getElementById("User").className = "question";
+  document.getElementById("Pc").className = "question";
   document.getElementById("span").innerHTML = "";
 }
 
 function rock() {
-  document.getElementById("User").src = "/Assets/images/rock.png";
+  User.className = "rock";
   console.log("rock");
 }
 function paper() {
